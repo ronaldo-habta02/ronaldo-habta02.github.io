@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>happybirthdaysihem</title>
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="all.min.css" />
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="kasper.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header>
+      <div class="container">
+        
+        <nav>
+          <i class="fas fa-bars toggle-menu"></i>
+          <ul>
+            <li><a class="active" href="#HOME">HOME</a></li>
+            <li><a href="#MEMORIES">MEMORIES</a></li>
+            <li><a href="#CONVERSATIONS">CONVERSATIONS</a></li>
+            <li><a href="#VIDEO">VIDEO</a></li>
+            <li><a href="#MINAA">MINAA </a></li>
+            <li><a href="#MA3NDK MAT7WSI">SEARCH MAYMCHICH</a></li>
+          </ul>
+          <div class="form">
+            <i class="fas fa-search"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Landing -->
+    <section id="HOME">
+    <div class="landing">
+      <div class="overlay"></div>
+      <div class="text">
+        <div class="content">
+          <h2>
+            Hello World!<br />
+            We Are Kasper We Make Art.
+          </h2>
+          <p>
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget tincidunt
+            nibh pulvinar a. Curabitur aliquet quam. Accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet
+            elit, eget tincidunt.
+          </p>
+        </div>
+      </div>
+      
+      
+    </div>
+  </section>
+    <!-- End Landing -->
+    <!-- Start Services -->
+    <section id="MEMORIES">
+    <div class="services">
+      <div class="container">
+        <div class="main-heading">
+          <h2>Some memories (اضغطي على الصورة)</h2>
+          
+        </div>
+        
+      </div>
+    </div>
+  </section>
+    <!-- End Services -->
+    <!-- Start Design -->
+    <style>
+        
+    
+        body {
+          margin: 0;
+        }
+    
+        *, *:before, *:after {
+          box-sizing: inherit;
+        }
+    
+        .panels {
+          min-height: 100vh;
+          overflow: hidden;
+          display: flex;
+        }
+    
+        .panel {
+          background: #6B0F9C;
+          box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+          color: white;
+          text-align: center;
+          align-items: center;
+          /* Safari transitionend event.propertyName === flex */
+          /* Chrome + FF transitionend event.propertyName === flex-grow */
+          transition:
+            font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+            flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+            background 0.2s;
+          font-size: 20px;
+          background-size: cover;
+          background-position: center;
+          flex: 1;
+          justify-content: center;
+          display: flex;
+          flex-direction: column;
+        }
+    
+        .panel1 { background-image:url(images/4.jpg); }
+        .panel2 { background-image:url(images/photo_2023-09-03_01-12-29.jpg); }
+        .panel3 { background-image:url(images/3.jpg); }
+        .panel4 { background-image:url(images/2.jpg); }
+        .panel5 { background-image:url(images/5.jpg); }
+    
+        /* Flex Items */
+        .panel > * {
+          margin: 0;
+          width: 100%;
+          transition: transform 0.5s;
+          flex: 1 0 auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    
+        .panel > *:first-child { transform: translateY(-100%); }
+        .panel.open-active > *:first-child { transform: translateY(0); }
+        .panel > *:last-child { transform: translateY(100%); }
+        .panel.open-active > *:last-child { transform: translateY(0); }
+    
+        .panel p {
+          text-transform: uppercase;
+          font-family: 'Amatic SC', cursive;
+          text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+          font-size: 2em;
+        }
+    
+        .panel p:nth-child(2) {
+          font-size: 4em;
+        }
+    
+        .panel.open {
+          flex: 5;
+          font-size: 40px;
+        }
+    
+        @media only screen and (max-width: 600px) {
+          .panel p {
+            font-size: 1em;
+          }
+        }
+      </style>
+    
+    
+      <div class="panels">
+        <div class="panel panel1">
+          <p>Hey</p>
+          <p>Let's</p>
+          <p>Have Fun</p>
+        </div>
+        <div class="panel panel2">
+          <p>Let Me</p>
+          <p>Take</p>
+          <p>You Back</p>
+        </div>
+        <div class="panel panel3">
+          <p>Experience</p>
+          <p>This</p>
+          <p>Time Travel</p>
+        </div>
+        <div class="panel panel4">
+          <p>Cherishing</p>
+          <p>Time</p>
+          <p>Together</p>
+        </div>
+        <div class="panel panel5">
+          <p>Free Vending</p>
+          <p>Machine</p>
+          <p>Of Memories</p>
+        </div>
+      </div>
+    
+      <script>
+        const panels = document.querySelectorAll('.panel');
+    
+        function toggleOpen() {
+          console.log('Hello');
+          this.classList.toggle('open');
+        }
+    
+        function toggleActive(e) {
+          console.log(e.propertyName);
+          if (e.propertyName.includes('flex')) {
+            this.classList.toggle('open-active');
+          }
+        }
+    
+        panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+        panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+      </script>
+    <!-- End Design -->
+    <section id="CONVERSATIONS">
+    <!-- Start Portfolio -->
+    <div class="portfolio">
+      <div class="container">
+        <div class="main-heading">
+          <h2>some conversations </h2>
+          <p>
+            I coded this section and i do not know what screenshots i am going to upload  next days
+          </p>
+        </div>
+        
+        </ul>
+      </div>
+      <div class="imgs-container">
+        <div class="box">
+          <img src="images/lwl 5lass.jpg" alt="" />
+          <div class="caption">
+            <h4>First 1/2 talk ever </h4>
+            <p>4 oct 2020</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/ana 1.jpg" alt="" />
+          <div class="caption">
+            <h4>First talk ever</h4>
+            <p>27 mar 2021</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/exist.jpg" alt="" />
+          <div class="caption">
+            <h4>انقضاض على الفريسة</h4>
+            <p>9 oct 2022</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/hang.jpg" alt="" />
+          <div class="caption">
+            <h4>Ask you out</h4>
+            <p>10 oct 2022</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/graduating.jpg" alt="" />
+          <div class="caption">
+            <h4>Graduating from sihem university</h4>
+            <p>10 oct 2022</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/love you.jpg" alt="" />
+          <div class="caption">
+            <h4>First I love you</h4>
+            <p>10 jan 2023</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/do you want.jpg" alt="" />
+          <div class="caption">
+            <h4>Askin you to be my Gf</h4>
+            <p>5 feb 2023</p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/my name.jpg" alt="" />
+          <div class="caption">
+            <h4>saying my name for the first time</h4>
+            <p>18 sep 2022 (best day mouhim achfay 3la hadak vcl ta3 ta9am fani)</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+    <!-- End Portfolio -->
+    <!-- Start Video -->
+    <section id="VIDEO">
+    <div class="video">
+      <video autoplay muted loop>
+        <source src="images/VID_20230621_161135 (1).mp4" type="video/mp4" />
+      </video>
+      <div class="text">
+        <h2>the only video for you that i have</h2>
+        <p>u never send videoes (ur so cute)</p>
+        
+      </div>
+    </div>
+  </section>
+    <!-- End Video -->
+    <!-- Start About -->
+    <section id="MINAA">
+    <div class="about">
+      <div class="container">
+        <div class="main-heading">
+          <h2 class="jdida">i l v u</h2>
+          <p>
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Mauris blandit aliquet elit, eget
+            tincidunt.
+          </p>
+        </div>
+        <img src="images/6.jpg" alt="" />
+      </div>
+    </div>
+  </section>
+    <!-- End About -->
+    <!-- Start Stats -->
+    
+    <!-- End Stats -->
+    <!-- Start Skills -->
+
+
+    <!-- End Skills -->
+    <!-- Start Quote -->
+    <div class="quote">
+      <div class="container">
+        <q>i wanted to add this pic but bcz its too big i added it randomly XD</q>
+        <span>Told ya we cute</span>
+      </div>
+    </div>
+    <!-- End Quote -->
+    <!-- Start Pricing -->
+
+    <!-- End Pricing -->
+    <!-- Start Subscribe -->
+    <div class="subscribe">
+        <div class="container">
+          
+          
+          <p>
+            Happy birthday, babe! I hope you like this little website I made. I will always love you
+          </p>
+        </div>
+      </div>
+    <!-- End Subscribe -->
+    <!-- Start Contact -->
+    
+    <!-- End Contact -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll("ul li a");
+    
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+    
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+    
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+    
+    <!-- Start Footer -->
+    <div class="footer">
+      <div class="container">
+        
+        <p> I tried to put all these beautiful memories together. Hope you like them, babe</p>
+        
+        <p class="copyright">&copy; 2023 <span>Islem Loves Sihem</span> All Right Reserved</p>
+        <p>lah galb hadou lazm nzidhm ze3ma 7aja pro</p>
+      </div>
+    </div>
+    <!-- End Footer -->
+  </body>
+</html>
